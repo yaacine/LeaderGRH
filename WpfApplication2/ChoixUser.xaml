@@ -1,0 +1,25 @@
+﻿<Page x:Class="WindowWPf.ChoixUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindowWPf"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ChoixUser" Background="White" Width="420" Height="300" Loaded="Page_Loaded">
+
+    <Grid>
+        <ListView x:Name="UserGrid" HorizontalAlignment="Left" Height="291" Margin="22,0,0,0" VerticalAlignment="Top" Width="398" ItemsSource="{Binding}" MouseDoubleClick="UserGrid_GotMouseCapture">
+            <ListView.View>
+                <GridView x:Name="UserGridView"  ColumnHeaderToolTip="Utilisateurs Enregistrés">
+                    <GridView.ColumnHeaderTemplate>
+                        <DataTemplate >
+                            <TextBlock Text="{Binding}" FontSize="14" FontWeight="ExtraBold" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Comic Sans MS" Foreground="DarkGray"></TextBlock>
+                        </DataTemplate>
+                    </GridView.ColumnHeaderTemplate>
+                    <GridViewColumn Header="Nom D'Utilisateur"  DisplayMemberBinding="{Binding Identifiant}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

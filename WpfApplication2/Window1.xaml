@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApplication2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="Congés" Height="500" Width="600"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" 
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Icon="photos/images freepik/logo grh leader.png"
+        >
+    <Window.Resources>
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FFEBEBEB">
+        <materialDesign:Card Padding="22" Margin="10,10,47.5,0" Height="100" RenderTransformOrigin="0.5,0.5">
+            <TextBlock TextAlignment="Center" FontSize="40"  Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="Liste Des Conges" Margin="0,0,0,-19"/>
+        </materialDesign:Card>
+        <Image Source="photos/flat icons/téléchargement.jpg" Height="75" VerticalAlignment="Top" Margin="0,25,10,0" Width="83.333" HorizontalAlignment="Right"/>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth3" Background="White" VerticalAlignment="Stretch" Margin="45,65,53.333,35.667">
+            <ListView x:Name="Datagridgraph1"  BorderThickness="0" Canvas.Top="4"  Focusable="True" Visibility="Visible" Initialized="Datagridgraph1_Initialized" Canvas.Left="90" Margin="10,0,11.668,4.333">
+                <ListView.View>
+                    <GridView x:Name="Gridview">
+                        <GridViewColumn Header="Date De Debut" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}"  Width="140"  DisplayMemberBinding="{Binding DateDebut}" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DateDebut}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Date De Fin" Width="120" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}"  DisplayMemberBinding="{Binding DateFin}" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DateFin}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Type" Width="120" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}"  DisplayMemberBinding="{Binding Type}" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Type}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </materialDesign:Card>
+    </Grid>
+</Window>

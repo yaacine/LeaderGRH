@@ -1,0 +1,64 @@
+﻿<Page x:Class="WindowWPf.ModifierCompte"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Height="525"
+      Width="1000"
+      Title="ModifierCompte" Loaded="Page_Loaded"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      
+      Name="ajouterEmploye"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      Background="Transparent"
+      >
+
+    <Grid Margin="0,10,0,0" >
+        <StackPanel Orientation="Horizontal">
+            <materialDesign:Card Padding="12"  Width="850" Margin="40,5,0,0" x:Name="titre" Height="70">
+                <TextBlock TextAlignment="Center" FontSize="30" x:Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Modifier Un Compte"/></TextBlock>
+            </materialDesign:Card>
+            <Image Grid.Column="1"  HorizontalAlignment="Right" Width="103" Source="photos/parametres.png" Margin="0,10,10,0" Height="111.667" VerticalAlignment="Top" />
+
+        </StackPanel>
+        <TextBlock x:Name="MessageComptes" HorizontalAlignment="Left" Height="26" Margin="38.667,117.111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="353.556" FontSize="16" FontWeight="Bold" TextDecorations="{x:Null}" ><Underline><Run Text="Veuillez remplir les champs suivants :"/></Underline></TextBlock>
+        <GroupBox Margin="218.667,148.111,280,78.222">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <materialDesign:PackIcon Kind="AccountEdit" Height="50" Width="50" VerticalAlignment="Center" />
+                        <Label Foreground="White" Width="710" Height="28" FontSize="18">Modifier le mot de passe</Label>
+                    </DockPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+            <WrapPanel HorizontalAlignment="Left" Height="241" VerticalAlignment="Top" Width="675.382" Margin="-100,0,0,0">
+                <TextBlock x:Name="textBlock" Height="20" TextWrapping="Wrap" Width="121" FontSize="11" Margin="100,8,0,0" FontWeight="Bold"><Run Text="Nom "/><Run Text="D'U"/><Run Text="tili"/><Run Text="sateur :"/></TextBlock>
+                <TextBox x:Name="Pseudo" Height="25" TextWrapping="Wrap" Width="221" Margin="15,0,0,0" MaxLength="20" TextChanged="Pseudo_TextChanged"/>
+                <Image x:Name="CAncel1" Height="20" Width="35" RenderTransformOrigin="0.5,1.05" Margin="25,0,0,0" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"  IsVisibleChanged="Ok4_IsVisibleChanged" Visibility="Hidden"/>
+                <Image x:Name="Ok1" Height="20" Width="35" RenderTransformOrigin="0.5,1.05" Margin="25,0,0,0" Source="photos/Ok.png"  IsVisibleChanged="Ok4_IsVisibleChanged"/>
+                <TextBlock x:Name="textBlock1" Height="20" TextWrapping="Wrap" Text="Mot de Passe :" Width="121" Margin="100,12,0,0" FontWeight="Bold" RenderTransformOrigin="0.504,1.8"/>
+                <PasswordBox x:Name="MotDePasse" Height="25" Width="220" Margin="15,10,0,0" MaxLength="25" PasswordChanged="MotDePasse_PasswordChanged"/>
+                <Image x:Name="Cancel_2" Height="20" Width="35" RenderTransformOrigin="0.5,1.05" Margin="25,0,0,0" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"  IsVisibleChanged="Ok4_IsVisibleChanged" Visibility="Hidden"/>
+                <Image x:Name="Ok2" Height="20" Width="39" RenderTransformOrigin="0.729,0.7" Margin="25,10,0,0" Source="photos/Ok.png" IsVisibleChanged="Ok4_IsVisibleChanged" />
+                <TextBlock x:Name="textBlock2" Height="20" TextWrapping="Wrap" Text="Confirmation :" Width="121" Margin="100,12,0,0" FontWeight="Bold"/>
+                <PasswordBox x:Name="Confirmation" Height="25" Width="220" Margin="15,10,0,0" MaxLength="25" ToolTip="Confirmation du mot de passe" PasswordChanged="Confirmation_PasswordChanged" />
+                <Image x:Name="Cancel_3" Height="20" Width="35" RenderTransformOrigin="0.5,1.05" Margin="25,0,0,0" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"  IsVisibleChanged="Ok4_IsVisibleChanged" Visibility="Hidden"/>
+                <Image x:Name="Ok3" Height="20" Width="39" RenderTransformOrigin="0.729,0.7" Margin="25,10,0,0" Source="photos/Ok.png" IsVisibleChanged="Ok4_IsVisibleChanged" />
+                <TextBlock x:Name="textBlock6" Height="33" TextWrapping="Wrap" Width="121" Margin="100,12,0,0" FontWeight="Bold" Text="Mot de passe Actuel :"/>
+                <PasswordBox x:Name="AncienMDP" Height="25"  Width="220" Margin="15,10,0,0" MaxLength="40" PasswordChanged="AncienMDP_PasswordChanged"  />
+                <Image x:Name="Cancel4" Height="20" Width="35" RenderTransformOrigin="0.5,1.05" Margin="25,0,0,0" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png"  IsVisibleChanged="Ok4_IsVisibleChanged"/>
+                <Image x:Name="Ok4" Height="20" Width="39" RenderTransformOrigin="0.729,0.7" Margin="25,10,0,0" Source="photos/Ok.png" IsVisibleChanged="Ok4_IsVisibleChanged" Visibility="Hidden" />
+            </WrapPanel>
+        </GroupBox>
+        <Button x:Name="Submit" Content="Appliquer" Height="28" Width="110" Margin="416,456,474,31"  IsEnabled="False" FontWeight="Bold" Click="Submit_Click" d:LayoutOverrides="HorizontalAlignment"/>
+        <Image x:Name="photo_profil" Source="photos/defaut_homme.png" Margin="24,182,0,233" HorizontalAlignment="Left" Width="100" Height="Auto" VerticalAlignment="Stretch"></Image>
+        <Button x:Name="importer_btn" HorizontalAlignment="Left" Margin="24,0,0,182.5" Width="100" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Click="importer_btn_Click">Importer</Button>
+    </Grid>
+</Page>

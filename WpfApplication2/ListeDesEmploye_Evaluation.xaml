@@ -1,0 +1,116 @@
+﻿<Page x:Class="WpfApplication2.ListeDesEmploye_Evaluation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      Title="ListeDesEmploye_Evaluation" Width="1000" Height="535"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}" Loaded="Page_Loaded"
+      Name="listeEmployesPourEvaluer">
+
+    <Page.Resources>
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <StackPanel>
+        <DockPanel Margin="10">
+            <materialDesign:Card Padding="12"  Width="850" Margin="30,5,0,0" Name="titre" Height="70">
+                <TextBlock TextAlignment="Center" FontSize="30" Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}">Liste des employés-évaluations</TextBlock>
+            </materialDesign:Card>
+            <Image Source="photos/Employe.png"  Width="95" Height="75" Margin="0,0,10,0" />
+        </DockPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Name="barreDeRecherche"    Margin="-10,5,0,2" HorizontalAlignment="Left" Background="#cccccc"  >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock x:Name="textBlock" Background="AliceBlue" TextAlignment="Center"   Margin="200,7,0,0" Text="Rechercher par :"  Style="{StaticResource MaterialDesignBody2TextBlock}"
+  VerticalAlignment="Top" Width="120" Height="35"  HorizontalAlignment="Right" />
+            <ComboBox x:Name="Filtre" HorizontalAlignment="Right"
+                       materialDesign:ComboBoxAssist.ClassicMode="true"
+                     VerticalAlignment="Top" Width="120" Margin="5,7,0,0" Height="35" Background="AliceBlue">
+                    <ComboBoxItem x:Name="Nom_filtre" IsSelected="True" TextSearch.Text="Searche by name" Content="Nom"/>
+                    <ComboBoxItem Content="Numero Sociale"/>
+                    <ComboBoxItem x:Name="prenom_filtre" Content="Prenom"/>
+                </ComboBox>
+            <TextBox x:Name="searche_info" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Gray" Cursor="IBeam" SelectionBrush="#FF0D3715" BorderThickness="2" FontSize="18" FontFamily="Corbel" Background="AliceBlue" Margin="20,7,0,0" HorizontalAlignment="Right" Width="400" KeyDown="searche_info_KeyDown" ToolTip="Recherche dans la liste des employes">
+                <TextBox.InputBindings>
+                    <KeyBinding Key="Enter" Command="{Binding EnterKeyCommand}"/>
+                </TextBox.InputBindings>
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="9"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+                <Image x:Name="Searche" HorizontalAlignment="Right" Height="40" Cursor="Hand"  VerticalAlignment="Top"  Width="43"  Source="photos/flat icons/008-hiring.png"   MouseDown="Searche_Click"  Margin="5,5,5,0"   RenderTransformOrigin="0.5,0.5">
+            </Image>
+        </StackPanel>
+
+
+            <ListView x:Name="Datagridgraph"  Margin="25,5,0,2"  BorderThickness="2" HorizontalAlignment="Left"  SelectionChanged="Datagridgraph_SelectionChanged" Background="WhiteSmoke" Focusable="False" >
+            <ListView.View>
+                <GridView x:Name="Griidview">
+                    <GridViewColumn Header="Nom" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                    <TextBlock Text="{Binding Nom}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Prenom" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Prenom}" Foreground="Black"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Sexe" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Sexe}" Foreground="Black"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Telephone" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding NumeroTel}" Foreground="Black"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="E-mail"  HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Email}" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Normal"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Poste" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Poste}" Foreground="Black"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ListedesEvaluations" Width="170" Height="25" ToolTip="Afficher l'historique des Evaluations"  Cursor="Hand" Content="Liste Des Evaluations" IsEnabled="False" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Click="ListedesEvaluations_Click" Margin="0,0,50,0"   />
+        </StackPanel>
+    </Grid>
+</Page>

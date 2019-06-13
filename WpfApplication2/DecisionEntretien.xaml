@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApplication2.DecisionEntretien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+         Icon="photos/images freepik/logo grh leader.png"
+        Title="DecisionEntretien" Height="271" Width="450"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+  
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid MouseMove="Grid_MouseMove">
+        <materialDesign:Card Padding="22" Margin="6">
+            <TextBlock TextAlignment="Center" FontSize="40" Style="{DynamicResource MaterialDesignTitleTextBlock}">Décision</TextBlock>
+        </materialDesign:Card>
+
+        <TextBlock  Margin="0,135,0,0" Text="Veuillez Prendre Une decision :" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="190"></TextBlock>
+        <ComboBox   Margin="70,0,0,42.567" Name="decisionCombo"
+  materialDesign:HintAssist.Hint="Décision"
+  Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="135" Height="39.1" LostFocus="decisionCombo_LostFocus">
+            <ComboBoxItem>
+                Recruter
+            </ComboBoxItem>
+            <ComboBoxItem Content="Refuser"/>
+            <ComboBoxItem>
+                Planifier un autre entretien
+            </ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="Sauvegarder" materialDesign:ShadowAssist.ShadowDepth="Depth3" Click="decisionPrise" Content="Sauvegarder" Margin="0,0,78.333,39.167" HorizontalAlignment="Right" Width="110" Height="35" VerticalAlignment="Bottom" IsEnabled="False"/>
+    </Grid>
+</Window>

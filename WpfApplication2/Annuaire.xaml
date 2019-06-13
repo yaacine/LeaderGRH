@@ -1,0 +1,93 @@
+﻿<Page x:Class="WpfApplication2.Annuaire"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:shared="clr-namespace:Syncfusion;assembly=Syncfusion.Shared.Wpf"
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      FontFamily="{DynamicResource MaterialDesignFont}" 
+      Title="Annuaire" x:Name="annuaire"  Height="535" Width="1000"  Loaded="annuaire_Loaded" >
+
+    <Page.Resources>
+        <Style  TargetType="GridViewColumnHeader" x:Key="Stylus">
+            <Style.Resources>
+                <TextBlock x:Key="text" TextAlignment="Center" FontWeight="Bold"/>
+            </Style.Resources>
+        </Style>
+        
+        <Style x:Key="Button_Style" TargetType="Button">
+            <Setter Property="FontWeight" Value="ExtraBlack"></Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel>
+        <DockPanel Margin="10">
+            <materialDesign:Card Padding="12"  Width="850" Margin="30,5,0,0" Name="titre" Height="70">
+                    <TextBlock TextAlignment="Center" FontSize="30" Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}">Annuaire</TextBlock>
+            </materialDesign:Card>
+            <Image Source="photos/directory.png"  Width="95" Height="75" Margin="5,10,10,0" />
+        </DockPanel>
+        <syncfusion:SfDataGrid Name="SfGrid"
+                               AllowFiltering="True"
+                               Height="365"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Loaded="SfGrid_Loaded"
+                               AllowEditing="False"
+                               AllowDeleting="False"
+                               AllowResizingColumns="True" Margin="0,0,0,0" Width="980"
+                               
+                               >
+            <syncfusion:SfDataGrid.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Syncfusion.SfGrid.WPF;component/Styles/Styles.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </syncfusion:SfDataGrid.Resources>
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn 
+                                                   
+                                                   HeaderText="Matricule"
+                                                   MappingName="Matricule"
+                                                   TextAlignment="Center" />
+                <syncfusion:GridTextColumn
+                                                   HeaderText="Nom"
+                                                   MappingName="Nom"
+                                                   TextAlignment="Center" />
+                <syncfusion:GridTextColumn HeaderText="Prenom" MappingName="Prenom" TextAlignment="Center" />
+                <syncfusion:GridTextColumn HeaderText="Numero Tel"
+                                                   MappingName="Numtel"
+                                                   TextAlignment="Center" />
+                <syncfusion:GridTextColumn HeaderText="Poste"
+                                           MappingName="Poste"
+                                          TextAlignment="Center" />
+                <syncfusion:GridTextColumn         HeaderText="E-Mail"
+                                                   MappingName="Email"
+                                                   TextAlignment="Center"
+                                                   Width="250"/>
+
+                <syncfusion:GridTextColumn         HeaderText="Projet"
+                                                   MappingName="Projet"
+                                                   TextAlignment="Center"
+                                                   />
+            </syncfusion:SfDataGrid.Columns>
+
+        </syncfusion:SfDataGrid>
+              </StackPanel>
+        <Button x:Name="Exporter" Content="Exporter Excel" HorizontalAlignment="Center"  Margin="0,0,0,25" VerticalAlignment="Bottom" Width="180"  Click="Exporter_Click" Cursor="Hand"/>
+
+    </Grid>
+
+</Page>

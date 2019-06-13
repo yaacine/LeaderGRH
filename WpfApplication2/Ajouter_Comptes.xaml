@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfApplication2.Ajouter_Comptes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="Ajouter_Comptes" Height="500" Width="644.667"
+         xmlns:System="clr-namespace:System;assembly=mscorlib" 
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FFFAFAFA"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid Width="644">
+
+        <StackPanel Orientation="Horizontal">
+            <materialDesign:Card Padding="22" Width="510" Margin="10,10,10,10">
+                <TextBlock TextAlignment="Center" FontSize="40" Style="{DynamicResource MaterialDesignTitleTextBlock}">Nouveau compte</TextBlock>
+            </materialDesign:Card>
+            <Image x:Name="image" HorizontalAlignment="Right" Height="100" Margin="0,10,14,0" VerticalAlignment="Top" Width="100"  Source="photos/001-add-user-1.png" />
+
+        </StackPanel>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="White" VerticalAlignment="Stretch" Margin="33,65,33,35.667">
+            <ScrollViewer>
+                <StackPanel>
+                    <DockPanel>
+                        <Image x:Name="photo_profil" Source="photos/defaut_homme.png" Height="65.333" Width="71.999" Margin="0"></Image>
+                        <Button x:Name="importer_photo" Width="100" Margin="-280,0,0,0" Click="importer_photo_Click">Importer</Button>
+                    </DockPanel>
+                   
+                    <DockPanel Height="40" Margin="0">
+                        <TextBlock x:Name="textBlock" Height="20" TextWrapping="Wrap" Width="128" FontSize="13" Margin="20,8,0,0" FontWeight="Bold"><Run Text="Nom "/><Run Text="D'U"/><Run Text="tili"/><Run Text="sateur :"/></TextBlock>
+                        <TextBox x:Name="Pseudo" materialDesign:HintAssist.Hint="Nom d'utilisateur" Height="25" TextWrapping="Wrap" Width="200" Margin="0,7.5" MaxLength="20" TextChanged="Pseudo_TextChanged"/>
+                        <Label x:Name="UserWarning" Content="6 caracteres au minimum" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="144" FontWeight="Bold" Foreground="#FFFF0808" IsVisibleChanged="IsVisibleChanged" Margin="0,10,0,0" FontSize="10"/>
+                    </DockPanel>
+
+                    <DockPanel Height="40">
+                        <TextBlock x:Name="textBlock1" Height="20" TextWrapping="Wrap" Text="Mot de Passe :" Width="128"  FontWeight="Bold" Margin="20,8,0,0"/>
+                        <PasswordBox x:Name="MotDePasse" materialDesign:HintAssist.Hint="Mot de passe" Height="25" Width="200" Margin="0,7.5" MaxLength="25" PasswordChanged="MotDePasse_PasswordChanged"/>
+                        <Label x:Name="PassWarning" Content="6 caracteres au minimum" HorizontalAlignment="Left"  Width="144" Foreground="#FFFF0808" FontWeight="Bold" IsVisibleChanged="IsVisibleChanged" Margin="0,14,0,0.5" FontSize="10"/>
+                    </DockPanel>
+
+                    <DockPanel Height="40">
+                        <TextBlock x:Name="textBlock2" Height="20" TextWrapping="Wrap" Text="Comfirmation :" Width="128"  FontWeight="Bold" Margin="20,8,0,0"/>
+                        <PasswordBox x:Name="Confirmation" materialDesign:HintAssist.Hint="Mot de passe" Height="25" Width="200" Margin="0,7.5" MaxLength="25" PasswordChanged="Confirmation_PasswordChanged"/>
+                        <Label x:Name="ConfirWarning" IsVisibleChanged="IsVisibleChanged" Content="mot de passe incorrespondant" HorizontalAlignment="Left"  Width="144" Foreground="#FFFF0808" FontWeight="Bold" Margin="0,14,0,0.5" FontSize="9"/>
+                    </DockPanel>
+
+                    <DockPanel Height="40">
+                        <TextBlock x:Name="textBlock3" Height="20" TextWrapping="Wrap" Text="Question 1:" Width="128"  FontWeight="Bold" Margin="20,8,0,0"/>
+                        <ComboBox x:Name="Questions1"  Width="200" Margin="-145,10,0,6" Height="24" ToolTip="Question nécessaire en cas de perte du mot de passe" FontSize="11" >
+                            <ComboBoxItem>Nom de la rue où vous avez grandi</ComboBoxItem>
+                            <ComboBoxItem>Nom de votre école primaire</ComboBoxItem>
+                            <ComboBoxItem>Nom de votre animal de compagnie</ComboBoxItem>
+                        </ComboBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock x:Name="textBlock4" Height="20" TextWrapping="Wrap" Width="128" FontSize="13" Margin="20,8,0,0" FontWeight="Bold">Reponse :</TextBlock>
+                        <TextBox x:Name="reponse1" materialDesign:HintAssist.Hint="Reponse" Height="25" TextWrapping="Wrap" Width="200" Margin="-140,7.5,0,7.5" MaxLength="20"/>
+                    </DockPanel>
+
+                    <DockPanel Height="40">
+                        <TextBlock x:Name="textBlock5" Height="20" TextWrapping="Wrap" Text="Question 2:" Width="128"  FontWeight="Bold" Margin="20,8,0,0"/>
+                        <ComboBox x:Name="Questions2"  Width="200" Margin="-145,10,0,6" Height="24" ToolTip="Question nécessaire en cas de perte du mot de passe" FontSize="11" >
+                            <ComboBoxItem>Titre de votre série télé préférée</ComboBoxItem>
+                            <ComboBoxItem>Titre de votre livre préferé</ComboBoxItem>
+                            <ComboBoxItem>Votre destination de vacance préférée</ComboBoxItem>
+                        </ComboBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock x:Name="textBlock6" Height="20" TextWrapping="Wrap" Width="128" FontSize="13" Margin="20,8,0,0" FontWeight="Bold">Reponse :</TextBlock>
+                        <TextBox x:Name="reponse2" materialDesign:HintAssist.Hint="Reponse" Height="25" TextWrapping="Wrap" Width="200" Margin="-140,7.5,0,7.5" MaxLength="20"/>
+                    </DockPanel>
+
+
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:Card>
+        <Button x:Name="Submit" materialDesign:ShadowAssist.ShadowDepth="Depth4" Content="Ajouter" Height="Auto" Width="119.333" Margin="247.333,416.799,277.333,10" IsEnabled="False" FontWeight="Bold"  Click="Submit_Click" d:LayoutOverrides="HorizontalAlignment, LeftMargin, RightMargin"/>
+    </Grid>
+</Window>

@@ -1,0 +1,9 @@
+
+
+Date:2018-04-21 15:38:22,919
+Thread:[1]
+Level:ERROR
+Logger:SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM                         [(null)]
+Message:System.IndexOutOfRangeException: L'index se trouve en dehors des limites du tableau.
+   à SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM.set_SelectedPlatformName(String value)
+   à SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM.SetSupportedPlatformsVisibility(String selectedVersion)

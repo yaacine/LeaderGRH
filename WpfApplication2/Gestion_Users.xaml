@@ -1,0 +1,62 @@
+﻿<Page x:Class="WpfApplication2.Gestion_Users"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+      Width="1000" Height="525"    
+      Title="Gestion_Users" Loaded="Page_Loaded"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      Name="ajouterEmploye"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Page.Resources>
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+    </Page.Resources>
+    <Grid Width="1000" Height="525">
+        <StackPanel Orientation="Horizontal">
+            <materialDesign:Card Padding="12"  Width="850" Margin="40,5,0,0" x:Name="titre" Height="70">
+                <TextBlock TextAlignment="Center" FontSize="30" x:Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Liste Des Comptes"/></TextBlock>
+            </materialDesign:Card>
+            <Image Grid.Column="1"  HorizontalAlignment="Right" Width="103" Source="photos/flat icons/007-people-1.png" Margin="0,10,10,0" Height="107.666" VerticalAlignment="Top" />
+
+        </StackPanel>
+        <GroupBox Header="Card Group Box" Name="groupeBox1" Style="{DynamicResource MaterialDesignCardGroupBox}" Margin="250,112.333,200,103.667" Padding="10" HorizontalAlignment="Left"  Background="{x:Null}" Width="519">
+            <GroupBox.HeaderTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <materialDesign:PackIcon Kind="AccountCardDetails" Height="50" Width="50" VerticalAlignment="Center" />
+                        <Label Foreground="White" Width="710" Height="28" FontSize="18">Historique des entretiens D'evaluation</Label>
+                    </DockPanel>
+                </DataTemplate>
+            </GroupBox.HeaderTemplate>
+
+            <ListView x:Name="Datagridgraph" Canvas.Top="145" Width="421" Canvas.Left="160" Background="WhiteSmoke" Focusable="False" SelectionChanged="Datagridgraph_SelectionChanged" Margin="0,0,0,24">
+                <ListView.View>
+                    <GridView x:Name="Griidview">
+                        <GridViewColumn Header="Identifiant" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Identifiant}" Foreground="Black" FontStyle="Italic" FontSize="14" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <Button x:Name="Butto_Modifier" Canvas.Left="846.106" Canvas.Top="475" Width="156" Height="25" ToolTip="Modifier les informations de l'employe selectionne" Cursor="Hand" Content="Modifer" IsEnabled="False" Click="Butto_Modifier_Click" HorizontalAlignment="Right" Margin="0,0,274.553,26.5" VerticalAlignment="Bottom" d:LayoutOverrides="Height"/>
+        <Button x:Name="Butto_Modifier_Copy" Canvas.Left="616.894" Canvas.Top="475" Width="156.106" Height="25" ToolTip="Creer Un nouveau compte utilisateur" Cursor="Hand" Content="Ajouter employe" Click="Butto_Modifier_Copy_Click" HorizontalAlignment="Left" Margin="277.947,0,0,26.5" VerticalAlignment="Bottom" d:LayoutOverrides="Width, Height"/>
+    </Grid>
+</Page>

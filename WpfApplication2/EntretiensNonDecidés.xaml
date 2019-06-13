@@ -1,0 +1,109 @@
+﻿<Page x:Class="WpfApplication2.EntretiensNonDecidés"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      Height="535" Width="1000"
+      Title="EntretiensNonDecidés"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      FontFamily="{DynamicResource MaterialDesignFont}"
+      Name="entretiensEnAprobation"
+      Loaded="entretiensEnAprobation_Loaded"
+      >
+    <Page.Resources>
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+
+        <StackPanel>
+            <DockPanel>
+            <materialDesign:Card Padding="12"  Width="850" Margin="30,5,0,0" Name="titre" Height="70">
+                    <TextBlock TextAlignment="Center" FontSize="30" Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}">Entretiens en cours d'aprobation</TextBlock>
+            </materialDesign:Card>
+                <Image Source="photos/flat icons/018-businessman.png"  Width="95" Height="75" Margin="0,10,10,0" />
+            </DockPanel>
+            <DockPanel>
+                <ListView Name="entretienIndecis" Width="650" HorizontalAlignment="Left" Margin="30,88,20,67" >
+                <ListView.View>
+                    <GridView x:Name="grid2" >
+                        <GridViewColumn Header="Num entretien" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}"  Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding numEntretien }" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Num candidat" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding numCandidat}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Nom" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}"  Width="80">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding nom}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Prenom" HeaderContainerStyle="{StaticResource ColumnHeaderStyle }" Width="80"  >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding prenom}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Intitulé du poste" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="120">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding poste}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Date du dernier entretien" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}" Width="170">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding dateEntretien}" Foreground="Black" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+           
+        </DockPanel>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,20,20">
+                <Button  Click="entrerienDetails"
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Width="170" Margin="10"
+    ToolTip="Voir les details de l'entretient selectionné">
+                    Details de l'entretien
+                </Button>
+                <Button  Click="priseDecision"
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Width="170" Margin="10"
+    ToolTip="Decider de l'étape suivante pour l'entretien selectionné">
+                    Prendre une decision
+                </Button>
+
+            </StackPanel>
+       
+    </Grid>
+</Page>

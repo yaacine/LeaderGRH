@@ -1,0 +1,162 @@
+﻿<Page x:Class="WpfApplication2.ListeCongés"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d"
+      Loaded="Datagridgraph_Initialized"
+      Title="ListeCongés" Height="525" Width="1025" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      FontFamily="{DynamicResource MaterialDesignFont}" 
+      Name="listeConges1"
+      >
+
+    <Page.Resources>
+        <Style x:Key="ColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+        </Style>
+        <Style x:Key="Button_Style" TargetType="Button">
+            <Setter Property="FontWeight" Value="ExtraBlack"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid >
+
+
+        <StackPanel>
+            <DockPanel Margin="10">
+                <materialDesign:Card Padding="12"  Width="850" Margin="30,5,0,0" Name="titre" Height="70">
+                    <TextBlock TextAlignment="Center" FontSize="30" Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}">Liste des congés</TextBlock>
+                </materialDesign:Card>
+                <Image Source="photos/flat icons/téléchargement.jpg"  Width="95" Height="75" Margin="5,10,10,0" />
+            </DockPanel>
+
+            <StackPanel Orientation="Horizontal" Height="45" Name="barreDeRecherche"  Margin="-10,5,0,2" HorizontalAlignment="Left" Background="#cccccc"  >
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="55"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock x:Name="textBlock" Background="AliceBlue" TextAlignment="Center" Padding="0,10,0,0"  TextWrapping="Wrap" Text="Rechercher par :"  Style="{StaticResource MaterialDesignBody2TextBlock}"
+  VerticalAlignment="Top" Width="120" Height="35" Margin="200,5,0,0"  />
+                <ComboBox x:Name="Filtre"
+                       materialDesign:ComboBoxAssist.ClassicMode="true"
+                      HorizontalAlignment="Right" VerticalAlignment="Top" Width="120" Margin="5,5,0,0" Height="35" Background="AliceBlue">
+                    <ComboBoxItem Name="Rien_filtre"  Content="Aucun" IsSelected="True" />
+                    <ComboBoxItem Name="Matricule_filtre"  Content="Matricule"/>
+                    <ComboBoxItem Name="Nom_filtre" Content="Nom" />
+                </ComboBox>
+                <TextBox x:Name="searche_info" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="Gray" Cursor="IBeam" HorizontalAlignment="Right" SelectionBrush="#FF0D3715" BorderThickness="2" FontSize="18" FontFamily="Corbel" Background="AliceBlue" Margin="20,5,0,0" Width="400" ToolTip="Recherche dans la liste des employes">
+                    <TextBox.InputBindings>
+                        <KeyBinding Key="Enter" Command="{Binding EnterKeyCommand}"/>
+                    </TextBox.InputBindings>
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="9"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Image x:Name="Searche" HorizontalAlignment="Right" Height="40" Cursor="Hand"  VerticalAlignment="Top"  Width="43"  Source="photos/flat icons/008-hiring.png"   MouseDown="Searche_MouseDown"  Margin="5,2,5,0" >
+                </Image>
+
+               
+            </StackPanel  >
+            <StackPanel Name="stackPanelfiltres" Margin="-20,0,0,10" Background="#cceccc" Orientation="Horizontal" HorizontalAlignment="Right" >
+                <TextBlock x:Name="textBlock1"  Style="{StaticResource MaterialDesignButtonTextBlock}" Height="25" Margin="500,0,0,0" TextWrapping="Wrap" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Mois :" />
+                <ComboBox Name="MoisCombo"  HorizontalAlignment="Right" VerticalAlignment="Top"  Width="120" Height="25"  Initialized="MoisCombo_Initialized" IsSelected="True" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+
+                <TextBlock x:Name="textBlock4" TextWrapping="Wrap"  Style="{StaticResource MaterialDesignButtonTextBlock}" VerticalAlignment="Center"  Width="100" Height="25" HorizontalAlignment="Center"  ><Run Text="Année"/><Run Text=" :"/></TextBlock>
+
+                <ComboBox Name="AnneeCombo"  HorizontalAlignment="Right" VerticalAlignment="Top"  Width="120"  Initialized="AnneeCombo_Initialized" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                            <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                </ComboBox>
+            </StackPanel>
+
+
+
+            <ListView x:Name="Datagridgraph" BorderBrush="{x:Null}" Foreground="{x:Null}" Initialized="Datagridgraph_Initialized" BorderThickness="0" Margin="25,0,0,0" Width="734" Height="300">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Matricule" Width="100" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding matricule}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="nom" Width="100" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding nom}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Prenom" Width="120" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding prenom}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Date Debut" Width="180" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DateDebut}" Foreground="Black"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Date Fin" Width="180" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DateFin}" Foreground="Black" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Type du congé" Width="100" HeaderContainerStyle="{StaticResource ColumnHeaderStyle}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Type}" Foreground="Black" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,25,25">
+            <Button x:Name="button" Content="Visualisation"  Height="35" Margin="0,0,20,0" VerticalAlignment="Bottom"  Click="button_Click"/>
+            <Button x:Name="button1" Content="Modifier" Margin="0" Height="34" Click="ModifierCongeButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="124" />
+        </StackPanel>
+    </Grid>
+
+</Page>

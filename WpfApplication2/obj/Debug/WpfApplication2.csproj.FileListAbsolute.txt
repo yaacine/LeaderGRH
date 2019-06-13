@@ -1,0 +1,98 @@
+c:\users\lenovo\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.exe
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\WpfApplication2.pdb
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.exe
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.pdb
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.exe
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.pdb
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.exe
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.pdb
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+C:\Users\LENOVO\Documents\Visual Studio 2015\Projects\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+D:\Visual_studio\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.pdb
+D:\Visual_studio\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.exe
+D:\Visual_studio\projet 2cpi\WpfApplication2\bin\Debug\WpfApplication2.pdb
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\MainWindow.g.cs
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\App.g.cs
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\MainWindow.baml
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+D:\Visual_studio\projet 2cpi\WpfApplication2\obj\Debug\WpfApplication2.exe
+D:\Visual_studio\projet djillali\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.exe
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.pdb
+D:\Visual_studio\projet djillali\WpfApplication2\bin\Debug\WpfApplication2.exe
+D:\Visual_studio\projet djillali\WpfApplication2\bin\Debug\WpfApplication2.pdb
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\MainWindow.g.cs
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\App.g.cs
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\MainWindow.baml
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+D:\Visual_studio\projet djillali\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+D:\Visual_studio\Projetessay\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.exe
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.pdb
+D:\Visual_studio\Projetessay\WpfApplication2\bin\Debug\WpfApplication2.exe
+D:\Visual_studio\Projetessay\WpfApplication2\bin\Debug\WpfApplication2.pdb
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\MainWindow.g.cs
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\App.g.cs
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\MainWindow.baml
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+D:\Visual_studio\Projetessay\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+D:\Visual_studio\Projet2Cpi\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.exe
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.pdb
+D:\Visual_studio\Projet2Cpi\WpfApplication2\bin\Debug\WpfApplication2.exe
+D:\Visual_studio\Projet2Cpi\WpfApplication2\bin\Debug\WpfApplication2.pdb
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\MainWindow.g.cs
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\App.g.cs
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\MainWindow.baml
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+D:\Visual_studio\Projet2Cpi\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\bin\Debug\WpfApplication2.exe.config
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.exe
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.pdb
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\bin\Debug\WpfApplication2.exe
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\bin\Debug\WpfApplication2.pdb
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\MainWindow.g.cs
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\App.g.cs
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.cache
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2_MarkupCompile.lref
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\MainWindow.baml
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.g.resources
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+E:\cours_informatique\2CPI 2017-2018\YACINE 2017-2018\SEMESTRE 4\PROJET\projets wpf projet\Projet2Cpi 12-02-2018\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache

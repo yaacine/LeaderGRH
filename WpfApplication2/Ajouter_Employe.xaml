@@ -1,0 +1,106 @@
+﻿<Page x:Class="WpfApplication2.Ajouter_Employe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      Height="525" Width="1000"
+      Title="Ajouter_Employe" Loaded="Page_Loaded"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      Name="ajouterEmploye"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+        <Grid >
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:Card Padding="12"  Width="850" Margin="40,5,0,0" x:Name="titre" Height="70">
+                    <TextBlock TextAlignment="Center" FontSize="30" x:Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Nouveau Employés"/></TextBlock>
+                </materialDesign:Card>
+                <Image Grid.Column="1"  HorizontalAlignment="Right" Width="103" Source="photos/Ajouter_Employe.png" Margin="0,10,10,30" />
+
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer Margin="0,150,-15,-325.367" Grid.ColumnSpan="2" Name="formulaire">
+            <Grid MouseMove="Grid_MouseMove" Height="1050">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="89*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Nom :" HorizontalAlignment="Left" Margin="125,19.05,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" Grid.Row="1"/>
+                <TextBox x:Name="Nom" Height="23" Margin="0,22.01,-95.001,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" PreviewMouseDown="Nom_PreviewMouseDown" LostFocus="Nom_LostFocus" HorizontalAlignment="Right" Width="334.667" Grid.Row="1"/>
+                <DatePicker Name="Datedenaissance" Height="25" VerticalAlignment="Top" Margin="0,112.05,-95.001,0" SelectedDateFormat="Long" HorizontalAlignment="Right" Width="334.667" Grid.Row="1"/>
+                <Label  Content="Date de Naissance :" Margin="125,111.05,244.666,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+                <Label  Content="Numero Sociale :" Margin="125,145.05,0,0" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="116.667" ToolTip="Numero D'immatriculation Sociale" Grid.Row="1"/>
+                <TextBox x:Name="NumImsociale" Height="23" Margin="0,147.009,-95.001,0" TextWrapping="Wrap" Text="Num Im Sociale" VerticalAlignment="Top" PreviewMouseDown="NumImsociale_PreviewMouseDown" LostFocus="NumImsociale_LostFocus" HorizontalAlignment="Right" Width="334.664" Grid.Row="1"/>
+                <Label  Content="Sexe :" HorizontalAlignment="Left" Margin="125,80.97,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" Grid.Row="1"/>
+                <RadioButton x:Name="Homme" GroupName="Sexe" Content="Homme" Margin="0,86.97,178.162,0" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Row="1"/>
+                <RadioButton x:Name="Femelle" GroupName="Sexe" Content="Femme" HorizontalAlignment="Right" Margin="0,86.97,-0.002,0" VerticalAlignment="Top" Grid.Row="1"/>
+                <Label  Content="Situation" HorizontalAlignment="Left" Margin="125,234.373,0,0" VerticalAlignment="Top" Width="83.333" FontWeight="Bold" RenderTransformOrigin="1.002,0.615" Grid.Row="1"/>
+                <RadioButton x:Name="Celibataire" GroupName="Situation" Content="Celibataire" HorizontalAlignment="Right" Margin="0,240.373,164.451,0" VerticalAlignment="Top" Grid.Row="1"/>
+                <RadioButton x:Name="Marie" GroupName="Situation" Content="Marie" HorizontalAlignment="Right" Margin="0,240.373,8.844,0" VerticalAlignment="Top" Grid.Row="1"/>
+                <DatePicker x:Name="Dateembauche" Height="25" VerticalAlignment="Top" Margin="0,266.333,-95.001,0" HorizontalAlignment="Right" Width="334.667" Grid.Row="1"/>
+                <Label  Content="Date d'embauche :" Margin="125,265.333,244.666,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+                <Label  Content="E-mail :" Margin="125,172.453,283.001,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1"/>
+                <TextBox x:Name="Email" Height="24.991" Margin="0,176.453,-95.001,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" PreviewMouseDown="Email_PreviewMouseDown" LostFocus="Email_LostFocus" HorizontalAlignment="Right" Width="334.667" Grid.Row="1"/>
+                <Label  Content="Adresse :" Margin="125,203.413,0,0" VerticalAlignment="Top" FontWeight="Bold" HorizontalAlignment="Left" Width="64.999" Grid.Row="1"/>
+                <TextBox x:Name="Adresse" Height="23" Margin="0,207.413,-95.001,0" TextWrapping="Wrap" Text="Adresse " VerticalAlignment="Top" PreviewMouseDown="Adresse_PreviewMouseDown" HorizontalAlignment="Right" Width="334.664" Grid.Row="1"/>
+                <Label  Content="Telephone :"  Height="25" Margin="125,440.189,0,0" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="120" Grid.Row="1" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+                <TextBox x:Name="Telephone" Height="25" Margin="0,440.789,-94.997,0" TextWrapping="Wrap" Text="Telephone" PreviewMouseDown="Telephone_PreviewMouseDown" LostFocus="Telephone_LostFocus" HorizontalAlignment="Right" Width="334.663" Grid.Row="1" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+                <Label  Content="Salaire :" HorizontalAlignment="Left" Margin="125,297.293,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" Height="30" Grid.Row="1"/>
+                <TextBox x:Name="Salaire" Height="25" Margin="0,301.293,-95.001,0" TextWrapping="Wrap" Text="Salaire" VerticalAlignment="Top" PreviewMouseDown="Salaire_PreviewMouseDown" LostFocus="Salaire_LostFocus" HorizontalAlignment="Right" Width="334.663" Grid.Row="1"/>
+                <Label  Content="Coordonnes Banc :" Margin="125,397.293,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="27.707" HorizontalAlignment="Left" Width="116.667" Grid.Row="1"/>
+                <TextBox x:Name="cooBanc" Height="25" Margin="0,401.293,-94.997,0" TextWrapping="Wrap" VerticalAlignment="Top" PreviewMouseDown="cooBanc_PreviewMouseDown" HorizontalAlignment="Right" Width="334.663" Text="Coordonne Bancaires" Grid.Row="1"/>
+                <Label  Content="Poste" HorizontalAlignment="Left" Margin="125,332.293,0,0" Width="70" FontWeight="Bold" Height="26" VerticalAlignment="Top" Grid.Row="1"/>
+                <TextBox x:Name="Poste" Margin="0,336.293,-94.997,0" TextWrapping="Wrap" Text="Poste" PreviewMouseDown="Poste_PreviewMouseDown" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="334.663" Grid.Row="1"/>
+                <Label  Content="Projet" HorizontalAlignment="Left" Margin="125,363.293,0,0" Width="80" FontWeight="Bold" Height="26.707" VerticalAlignment="Top" Grid.Row="1"/>
+                <TextBox x:Name="Projet" Margin="0,367.293,-94.997,0" TextWrapping="Wrap" Text="Projet" PreviewMouseDown="Projet_PreviewMouseDown" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="334.663" Grid.Row="1" d:LayoutOverrides="VerticalAlignment"/>
+                <Label  Content="Responsable :" HorizontalAlignment="Left" Margin="125,478.445,0,0" VerticalAlignment="Top" Width="110" FontWeight="Bold" Height="30" Grid.Row="1"/>
+                <TextBox x:Name="Responsable" Height="25" Margin="0,479.045,-94.997,0" TextWrapping="Wrap" Text="Responsable" VerticalAlignment="Top" PreviewMouseDown="Responsable_PreviewMouseDown" HorizontalAlignment="Right" Width="334.663" Grid.Row="1"/>
+                <Button x:Name="chargerCV" Content="Charger CV" Margin="166.334,0,199.667,361.667" VerticalAlignment="Bottom" Height="30" Click="File_Click" Grid.Column="1" Grid.Row="1"/>
+
+                <TextBox 
+                 Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"              
+                 VerticalScrollBarVisibility="Auto"
+                 VerticalAlignment="Top"
+                 materialDesign:HintAssist.Hint="Commentaire" Margin="125,524.112,-98.667,0" Grid.Row="1" x:Name="Commentaire" Height="86.6"/>
+
+                <Button x:Name="Submit" Content="Valider" Grid.Column="1" Margin="0,0,46.667,361.667" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100.6" Height="30" Click="Submit_Click" Grid.Row="1"/>
+                <TextBlock x:Name="commentaire_Prenom" Margin="133.667,52.97,113,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Foreground="#FFE90707" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="commentaire_Numimsoc" Margin="148.333,147.009,83.001,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Foreground="#FFE90707" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="commentaire_Telephone" Margin="148.333,440.789,94.666,0" TextWrapping="Wrap" Foreground="#FFE90707" Grid.Column="1" Grid.Row="1" Height="24.4" VerticalAlignment="Top"/>
+                <TextBlock x:Name="commentaire_Nom" Margin="133.667,22.01,113.001,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Foreground="#FFE90707" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock x:Name="comm_Email" Grid.Column="1" Margin="148.333,178.413,72.75,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Foreground="#FFDF0707" Grid.Row="1"/>
+                <Image x:Name="Croix_nom" HorizontalAlignment="Left" Height="23" Margin="107,22.01,0,0" VerticalAlignment="Top" Width="21.667" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Grid.Column="1" Visibility="Hidden" Grid.Row="1"/>
+                <Image x:Name="Croix_prenom" HorizontalAlignment="Left" Height="23" Margin="107,54.01,0,0" VerticalAlignment="Top" Width="21.667" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Grid.Column="1" Visibility="Hidden" Grid.Row="1"/>
+                <Image x:Name="Croix_NumImSoc" Height="23" Margin="108.333,147.009,0,0" VerticalAlignment="Top" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Grid.Column="1" HorizontalAlignment="Left" Width="21.667" Visibility="Hidden" Grid.Row="1"/>
+                <Image x:Name="Croix_telephone" HorizontalAlignment="Left" Margin="107,440.789,0,0" Width="21.667" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Grid.Column="1" Grid.Row="1" Height="26.333" VerticalAlignment="Top" Visibility="Hidden"/>
+                <TextBlock x:Name="Commentaire_CV" Margin="-33.517,0,0,359.167" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="25" Foreground="#FFE90705" HorizontalAlignment="Left" Width="150.184" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Grid.Column="1"><Run Text="CV pas encore Charg"/><Run Text="é"/><Run Text=" !"/></TextBlock>
+                <Image x:Name="Croix_Cv" Height="25" Margin="116.667,0,352.833,361.667" VerticalAlignment="Bottom" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Grid.Column="1" Grid.Row="1"/>
+                <Image x:Name="Croix_Salaire" HorizontalAlignment="Left" Margin="108.333,301.293,0,0" Width="21.667" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Height="25" VerticalAlignment="Top" Grid.Column="1" Visibility="Hidden" Grid.Row="1"/>
+                <TextBlock x:Name="Commentaire_Salaire" Margin="148.333,301.293,108.335,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFDF0703" Height="17.707" Grid.Column="1" Grid.Row="1"/>
+                <Label Content="Prenom :" HorizontalAlignment="Left" Margin="125,50.01,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold" Grid.Row="1"/>
+                <TextBox x:Name="Prenom" Height="23" Margin="0,54.01,-95.001,0" TextWrapping="Wrap" Text="Prenom" VerticalAlignment="Top" PreviewMouseDown="Nom_PreviewMouseDown" LostFocus="Nom_LostFocus" HorizontalAlignment="Right" Width="334.667" Grid.Row="1"/>
+                <Image x:Name="Croix_Email" Source="photos/fermer-croix-supprimer-erreurs-sortie-icone-4368-128.png" Height="20" Width="21.667" Grid.Column="1" HorizontalAlignment="Left" Margin="108.333,178.413,0,0" VerticalAlignment="Top" Visibility="Hidden" Grid.Row="1"/>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Source="photos/Employe.png"/>
+                <Button x:Name="button" Content="Importer" HorizontalAlignment="Left" Margin="0,124.85,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"  BorderBrush="#FF050F46" Click="button_Click" Height="25.378"/>
+            </Grid>
+        </ScrollViewer>
+        
+    </Grid>
+    
+</Page>

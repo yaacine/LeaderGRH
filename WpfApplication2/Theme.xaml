@@ -1,0 +1,106 @@
+﻿<Page x:Class="WpfApplication2.Theme"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="1000"
+      Title="Theme"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" 
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="Transparent"
+      Name="Theme_page"
+      FontFamily="{DynamicResource MaterialDesignFont}" Loaded="Page_Loaded">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+        <materialDesign:Card Padding="12"  Width="850" Margin="40,5,0,0" x:Name="titre" Height="70">
+                <TextBlock TextAlignment="Center" FontSize="30" x:Name="title" Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="Theme Utilisateur"/>
+            </materialDesign:Card>
+        <Image Grid.Column="1"  HorizontalAlignment="Right" Width="103" Source="photos/websites.png" Margin="0,10,10,0" Height="113" VerticalAlignment="Top" />
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Name="formulaire" Margin="30.667,166.667,0,0">
+            <materialDesign:Card Margin="70,0,0,0">
+                <Grid
+      Height="256"
+      Width="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+          Height="160" />
+                        <RowDefinition
+          Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone
+        Mode="PrimaryLight"
+        VerticalAlignment="Stretch" Background="#FF040F4B"/>
+                    <StackPanel
+        Grid.Row="1"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+                        <TextBlock Text="Bleu" Width="30.427"/>
+                        <Button x:Name="Bleu"
+            
+                         
+                         Margin="0 4 0 0" Content="Appliquer" Opacity="1" Click="Bleu_Click"/>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+
+            <materialDesign:Card Margin="20,0,0,0">
+                <Grid
+      Height="256"
+      Width="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+          Height="160" />
+                        <RowDefinition
+          Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone
+        Mode="PrimaryLight"
+        VerticalAlignment="Stretch" Background="#FF00434A"/>
+                    <StackPanel
+        Grid.Row="1"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+                        <TextBlock Text="Vert" Width="30.427"/>
+                        <Button x:Name="Vert"
+                         
+                         Margin="0 4 0 0" Content="Appliquer" Opacity="1" Click="Vert_Click"/>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+            <materialDesign:Card Margin="20,0,0,0">
+                <Grid
+      Height="256"
+      Width="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+          Height="160" />
+                        <RowDefinition
+          Height="*" />
+                    </Grid.RowDefinitions>
+                    <materialDesign:ColorZone
+        Mode="PrimaryLight"
+        VerticalAlignment="Stretch" Background="#FF3C3C3E"/>
+                    <StackPanel
+        Grid.Row="1"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+                        <TextBlock Text="Marron" Width="42.427"/>
+                        <Button x:Name="Marron"
+                         
+                         Margin="0 4 0 0" Content="Appliquer" Opacity="1"  Click="Marron_Click"/>
+                    </StackPanel>
+                </Grid>
+            </materialDesign:Card>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowWPf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="WindowWPf.Assistant"
+        mc:Ignorable="d"
+        Title="Assistant" Height="591" Width="515.5" WindowStyle="None" BorderThickness="3" BorderBrush="Black" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown" Closed="Window_Closed" Loaded="Window_Loaded"
+     Icon="photos/images freepik/logo grh leader.png"
+
+    >
+   
+
+    <Grid>
+        <Button x:Name="Exit" Background="Red" Foreground="White" Content="X" FontSize="13" FontWeight="Bold" Width="48" Height="22" Opacity="0.3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,15,18,0" MouseEnter="Exit_MouseEnter" MouseLeave="Exit_MouseLeave" Click="Exit_Click" FontStretch="Expanded"/>
+        <TextBlock x:Name="AssistantMDP" Text="Assistant De Restauration" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="131,60,136,0" FontSize="20" Height="35" Width="243" FontWeight="Bold"/>
+        <Rectangle  HorizontalAlignment="Left" Height="3" Margin="120,92,0,0" Stroke="Black" VerticalAlignment="Top" Width="263" RenderTransformOrigin="0.496,-0.6" Fill="Black"/>
+        <Frame x:Name="MyFrame" Width="425" BorderThickness="2,2,2,2" BorderBrush="Black" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="307" Margin="45,167,42,111" NavigationUIVisibility="Hidden" ></Frame>
+        <Button x:Name="Suivant" Content="Suivant" HorizontalAlignment="Center" Height="35" Margin="0,0,0,40" VerticalAlignment="Bottom" Width="129" IsEnabled="False" Background="DarkBlue" BorderBrush="DarkBlue" Click="Suivant_Click"/>
+        <TextBlock x:Name="MessageShown" HorizontalAlignment="Left" Margin="150,132,0,0" TextWrapping="Wrap" Text="Veuillez choisir un utilisateur :" VerticalAlignment="Top" Width="203" Height="30" FontWeight="DemiBold" FontFamily="Comic Sans MS" FontSize="13" />
+        <TextBlock x:Name="Fin" Text="Votre mot de passe a été changé , vous pouvez desormais l'utiliser pour vous connecter" Margin="18,284,10,274" Visibility="Hidden" RenderTransformOrigin="0.496,-0.167" FontWeight="DemiBold"/>
+    </Grid>
+</Window>

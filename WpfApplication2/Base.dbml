@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Project_Data" Class="BaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\bin\Debug\Project_Data.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="WpfApplication2.Properties.Settings" SettingsPropertyName="Project_DataConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Candidat" Member="Candidat">
+    <Type Name="Candidat">
+      <Column Name="NumeroCandidat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NumeroTel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IntitulePoste" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cvCabdidat" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Candidat_Entretient" Member="Entretient" ThisKey="NumeroCandidat" OtherKey="NumeroCandidat" Type="Entretient" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Conges" Member="Conges">
+    <Type Name="Conges">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Matricule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateDebut" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DateFin" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Formulaire" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DateRetour" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Employe_Conges" Member="Employe" ThisKey="Matricule" OtherKey="Matricule" Type="Employe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employe" Member="Employe">
+    <Type Name="Employe">
+      <Column Name="Matricule" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nom" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateDeNaissance" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SituationFamille" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DateEmbauche" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Poste" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Responsable" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Projet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NumImatSocial" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CV" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="DateDeDemission" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NumeroTel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NbJourConge" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CoorBancaires" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Commentaires" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Sexe" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Wilaya" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CongesConsomme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContratTravail" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PhotoProfil" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Employe_Conges" Member="Conges" ThisKey="Matricule" OtherKey="Matricule" Type="Conges" />
+      <Association Name="Employe_Evaluation" Member="Evaluation" ThisKey="Matricule" OtherKey="Matricule" Type="Evaluation" />
+      <Association Name="Employe_Salaires" Member="Salaires" ThisKey="Matricule" OtherKey="Matricule" Type="Salaires" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entretient" Member="Entretient">
+    <Type Name="Entretient">
+      <Column Name="NumEntret" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Experience" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Question1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EvaluationQuestion1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Question2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EvaluationQuestion2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaireDesire" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Commentaires" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EtapeSuivante" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NumeroCandidat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEntretien" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fait" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Candidat_Entretient" Member="Candidat" ThisKey="NumeroCandidat" OtherKey="NumeroCandidat" Type="Candidat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Evaluation" Member="Evaluation">
+    <Type Name="Evaluation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Matricule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateEval" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FichierEval" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NoteEval" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="Employe_Evaluation" Member="Employe" ThisKey="Matricule" OtherKey="Matricule" Type="Employe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parametres" Member="Parametres">
+    <Type Name="Parametres">
+      <Column Name="[Raison Sociale]" Member="Raison_Sociale" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Speciaite" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Site Web]" Member="Site_Web" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NomGerant" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PrenomGerant" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="MailGerant" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NumeroRC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IdFiscale" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Wilaya" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cle" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Salaires" Member="Salaires">
+    <Type Name="Salaires">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Salaire" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DateDajout" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Matricule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employe_Salaires" Member="Employe" ThisKey="Matricule" OtherKey="Matricule" Type="Employe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="Identifiant" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MDP" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="Qualite" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ThemeApp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuestSec1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Reponse1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuestSec2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Reponse2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Photo_Profil" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

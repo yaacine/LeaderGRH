@@ -1,0 +1,409 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        Name="fenetre_principale"
+        
+        Loaded="fenetre_principale_Loaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Height="640" Width="1230"
+        Title="GRH" Icon="photos/images freepik/logo grh leader.png"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        ResizeMode="CanMinimize"
+        
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FFFAFAFA"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="1"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="448*" />
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="Main" x:FieldModifier="public" BorderBrush="Black" BorderThickness="0" Background="Transparent" Content="" Margin="70,1,0,46" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden" Grid.Row="2"/>
+        <RadioButton x:Name="Vert" HorizontalAlignment="Left" Click="Vert_Click" Content="Vert" Canvas.Left="333.831" Canvas.Top="231.04" Cursor="Hand" FontWeight="Bold"/>
+        <RadioButton x:Name="Bleu" HorizontalAlignment="Left" Click="Bleu_Click" Content="Bleu" IsChecked="True" Cursor="Hand" Canvas.Left="333.831" Canvas.Top="95" FontWeight="Bold"/>
+        <RadioButton x:Name="Marron" HorizontalAlignment="Left" Click="Marron_Click" Content="Marron" Canvas.Left="333.831" Canvas.Top="380.04" IsChecked="True" Cursor="Hand" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal" x:Name="Footer" Height="46" Margin="21,0,-188,0" Grid.Row="2" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Background="#33000000">
+            <Border Width="58"/>
+            <materialDesign:Chip x:Name="Footer_Gerant"
+                Content="Gerant" Margin="0,7.166" Width="170" IconBackground="#FF1428F0" IconForeground="{x:Null}" Background="#26000000" Cursor="Arrow" ToolTip="Le Gerant de l'entreprise">
+                <materialDesign:Chip.Icon>
+                    <Image  Source="photos/Gerant.png" />
+                </materialDesign:Chip.Icon>
+            </materialDesign:Chip>
+            <Separator Background="Black" Width="24.333" Margin="10,10,10,12.999">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <materialDesign:Chip x:Name="Footer_Adresse"
+                Content="Adresse" Margin="0,7.166" Width="170" IconBackground="#FF96876E" IconForeground="Black" Background="#26000000" Cursor="Arrow" ToolTip="Adresse de l'entreprise">
+                <materialDesign:Chip.Icon>
+                    <materialDesign:PackIcon Kind="CompassOutline" Width="24.444" Height="22"/>
+                </materialDesign:Chip.Icon>
+            </materialDesign:Chip>
+            <Separator Background="Black" Width="24.333" Margin="10,10,10,12.999">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <materialDesign:Chip x:Name="Footer_Telephone"
+                Content="Telephone" Margin="0,7.166" Width="170" IconBackground="#FF14F01E" IconForeground="{x:Null}" Background="#26000000" Cursor="Arrow" ToolTip="Numero de telephone de l'entreprise">
+                <materialDesign:Chip.Icon>
+                    <materialDesign:PackIcon Kind="Phone" Foreground="Black" Height="20.667" Width="24.667"/>
+                </materialDesign:Chip.Icon>
+            </materialDesign:Chip>
+            <Separator Background="Black" Width="24.333" Margin="10,10,10,12.999">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <materialDesign:Chip x:Name="Footer_Fax"
+                Content="N* Fax" Margin="0,7.166" Width="170" IconBackground="#FF14F01E" IconForeground="{x:Null}" Background="#26000000" ToolTip="le numero de fax de l'entreprise">
+                <materialDesign:Chip.Icon>
+                    <materialDesign:PackIcon Kind="Fax" Foreground="Black" Height="20.667" Width="24.667"/>
+                </materialDesign:Chip.Icon>
+            </materialDesign:Chip>
+            <Separator Background="Black" Width="24.333" Margin="10,10,10,12.999">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <materialDesign:Chip x:Name="Footer_Mail"
+                Content="E-Mail" Margin="0,7.166" Width="167" IconBackground="#FF14F01E" IconForeground="{x:Null}" Background="#26000000" ToolTip="Email De l'entreprise">
+                <materialDesign:Chip.Icon>
+                    <materialDesign:PackIcon Kind="Email" Foreground="Black" Height="20.667" Width="24.667"/>
+                </materialDesign:Chip.Icon>
+            </materialDesign:Chip>
+        </StackPanel>
+
+        <StackPanel x:Name="MenuGestionDuPersonnel" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuGestionDuPersonnel_MouseLeave" Background="#FF555555" Visibility="Hidden" Grid.RowSpan="3">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Gestion du personnel" Background="{x:Null}" Foreground="White"/>
+
+            <Label x:Name="menuitem1_1"  Margin="5,50,0,10" Height="38" Background="{x:Null}" MouseEnter="menuitem1_1_MouseEnter" MouseLeave="menuitem1_1_MouseLeave" FontFamily="Snap ITC" Cursor="Hand" ToolTip="affiche la liste des employés">
+
+                <TextBlock  Margin="20,0,0,0"     Text="Liste des Employés" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Foreground="White"  MouseDown="menuitem1_2_MouseDown"  />
+            </Label>
+
+            <Label  x:Name="menuitem1_2" Height="38"  Background="{x:Null}" Margin="5,0,0,0" MouseEnter="menuitem1_2_MouseEnter" Cursor="Hand" ToolTip="Inscrir un nouveau employé" MouseLeave="menuitem1_2_MouseLeave">
+                <TextBlock Margin="20,0,0,0" Foreground="White" Text="Ajouter un employé" Width="154.816" Height="25" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" MouseDown="Ajouter_employer" />
+
+            </Label>
+
+            <materialDesign:PackIcon x:Name="Logo_Gadministrative"
+          Kind="AccountCircle"
+          Height="210"
+          Width="210"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center" Margin="29.607,80,29.607,0" Foreground="#FF28D142" />
+        </StackPanel>
+
+
+
+
+
+        <!--    deuxieme element du menu      -->
+
+        <StackPanel  Orientation="Horizontal" Width="100" Grid.Column="1" HorizontalAlignment="Right" Margin="0,10,10,2"/>
+        <StackPanel x:Name="MenuGestionDesConges" Background="#FF55555A" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuGestionDesConges_MouseLeave" Grid.RowSpan="3" Visibility="Hidden">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Gestion Des Conges" Background="{x:Null}" Foreground="White"/>
+
+            <Label x:Name="menuitem2_1"  Margin="2,50,5,10" Height="38" Background="{x:Null}" MouseEnter="menuitem2_1_MouseEnter" MouseLeave="menuitem2_1_MouseLeave"  Cursor="Hand">
+
+                <TextBlock x:Name="Item_Listedesconges"  Margin="15,0,0,0" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Background="{x:Null}"   Text="Liste des congés" Foreground="White"  MouseDown="Item_Listedesconges_MouseDown"  />
+            </Label>
+
+            <Label Height="38" x:Name="ajouterconger" Margin="2,0,0,0" MouseEnter="menuitem2_2_MouseEnter" MouseLeave="ajouterconger_MouseLeave">
+                <TextBlock x:Name="Ajouter_Un_Conge_Menu_Parametres" Margin="15,0,0,0"  Foreground="White" Text="Ajouter un conges" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Width="180" MouseDown="Ajouter_Un_Conge_Menu_Parametres_MouseDown" />
+            </Label>
+            <materialDesign:ColorZone
+                x:Name="Logo_Gconges"
+                CornerRadius="180"
+                Margin="29.607,80,29.607,0"
+                VerticalAlignment="Stretch" Height="190.786">
+                <materialDesign:PackIcon 
+                 Kind="Beach"
+                 Height="156"
+                 Width="190"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"  Foreground="{Binding Background, ElementName=MenuGestionDesConges}" />
+            </materialDesign:ColorZone>
+        </StackPanel>
+
+        <StackPanel x:Name="MenuGestionDesEvaluations" Background="#FF55555A" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuGestionDesEvaluations_MouseLeave" Visibility="Hidden" Grid.RowSpan="3">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Gestion Des Evaluations" Background="{x:Null}" Foreground="White"/>
+
+            <Label x:Name="Vue_Globale_Dock"  Margin="0,50,5,10" Height="38"   Cursor="Hand" MouseLeave="Vue_Globale_Dock_MouseEnter"  MouseDown="Vue_Globale_MouseDown" MouseEnter="Vue_Globale_Dock_MouseEnter_1">
+                <TextBlock x:Name="Vue_Globale"  Text="Vue globale" Foreground="White" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" MouseDown="Vue_Globale_MouseDown" Margin="20,0,0,0" />
+            </Label>
+            <Label x:Name="Prochain_Entretien_Dock" Height="38" MouseEnter="Prochain_Entretien_Dock_MouseEnter" MouseLeave="Prochain_Entretien_Dock_MouseLeave">
+                <TextBlock x:Name="Prochaine_ENtretien"  Foreground="White" Text="Prochaines évaluations" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Width="180" Margin="20,0,0,0" MouseDown="Prochaine_ENtretien_MouseDown"/>
+            </Label>
+
+            <materialDesign:ColorZone
+                x:Name="Logo_Gevaluation"
+                CornerRadius="180"
+                Margin="29.607,80,29.607,0"
+                VerticalAlignment="Stretch" Height="190.786">
+                <materialDesign:PackIcon 
+                 Kind="AccountCheck"
+                 Height="156"
+                 Width="190"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"  Foreground="{Binding Background, ElementName=MenuGestionDesConges}" />
+            </materialDesign:ColorZone>
+        </StackPanel>
+        <StackPanel x:Name="MenuGestionDesRecrutements" Background="#FF55555A" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuGestionDesRecrutements_MouseLeave" Grid.RowSpan="3" Visibility="Hidden">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Gestion Des Recrutements" Background="{x:Null}" Foreground="White"/>
+
+            <Label x:Name="listecandidat"  Margin="20,50,5,10" Height="38"   Cursor="Hand" MouseEnter="listecandidat_MouseEnter" MouseLeave="listecandidat_MouseLeave" MouseDown="TextBlock_MouseDown_1">
+                <TextBlock  Text="Liste des candidats" Foreground="White" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" />
+            </Label>
+            <Label x:Name="futurentretien" Height="38"  Margin="20,0,5,10"  MouseDown="TextBlock_PreviewMouseMove" MouseEnter="futurentretien_MouseEnter" MouseLeave="futurentretien_MouseLeave" >
+                <TextBlock  Foreground="White" Text="Futures Entretiens" MouseDown="TextBlock_PreviewMouseMove" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Width="180"/>
+            </Label>
+            <Label x:Name="entreitnindecis" Height="38"  Margin="20,0,5,10"   MouseDown="appelEntretinesNonDecides" MouseEnter="entreitnindecis_MouseEnter" MouseLeave="entreitnindecis_MouseLeave">
+                <TextBlock  Foreground="White" Text="Entretiens en approbation" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16" Width="230"/>
+            </Label>
+
+            <materialDesign:ColorZone
+                x:Name="Logo_GRectrutement"
+                CornerRadius="180"
+                Margin="29.607,50,29.607,0"
+                VerticalAlignment="Stretch" Height="190.786">
+                <materialDesign:PackIcon 
+                 Kind="AccountPlus"
+                 Height="156"
+                 Width="190"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"  Foreground="{Binding Background, ElementName=MenuGestionDesConges}" />
+            </materialDesign:ColorZone>
+
+
+        </StackPanel>
+        <StackPanel x:Name="MenuParametre" Background="#FF55555A" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuParametre_MouseLeave" Grid.RowSpan="3">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Mes Parametres" Background="{x:Null}" Foreground="White"/>
+            <Label x:Name="Menu_item_parametres_1" Margin="17.263,50,5,10" Height="38" Background="{x:Null}" MouseEnter="Menu_item_parametres_1_MouseEnter" MouseLeave="Menu_item_parametres_1_MouseLeave" Cursor="Hand" FontSize="16" MouseDown="Menu_item_parametres_1_MouseDown">
+                <TextBlock  Text="Modifier le Theme" Foreground="White" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16"   Width="202.553" />
+            </Label>
+
+            <TextBlock x:Name="Param_Genereux_button" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16"  Text="   Parametres de l'entreprise" Foreground="White"  Margin="10,0,0,0" Height="35" Cursor="Hand" MouseDown="TextBlock_MouseDown" MouseEnter="TextBlock_MouseEnter" MouseLeave="Param_Genereux_button_MouseLeave"/>
+
+            <Expander HorizontalAlignment="Stretch" Name="Expander" FontFamily="Yu Gothic Medium" Header="Gestion Des Comptes" Background="{x:Null}" FontStretch="SemiExpanded" Foreground="#FFFFFFFF" FontSize="16" BorderBrush="{x:Null}" FontWeight="Bold">
+                <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16" Cursor="Hand">
+                    <TextBlock x:Name="Liste_des_comptes" Text="Listes Des Comptes" Foreground="White" MouseDown="Gestion_des_comptes_MouseDown" MouseEnter="Liste_des_comptes_MouseEnter" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16"  MouseLeave="Liste_des_comptes_MouseLeave" Margin="0,0,0,10" Height="38" />
+                    <TextBlock x:Name="Ajouter_Compte" Text="Ajouter Un Compte" MouseDown="Ajouter_Compte_MouseDown" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16"  Height="38" Cursor="Hand" Foreground="White" MouseEnter="Ajouter_Compte_MouseEnter" MouseLeave="Ajouter_Compte_MouseLeave"/>
+                </StackPanel>
+            </Expander>
+            <materialDesign:ColorZone
+                x:Name="Logo_GParametres"
+                CornerRadius="180"
+                Margin="29.607,50,29.607,0"
+                VerticalAlignment="Stretch" Height="190.786">
+                <materialDesign:PackIcon 
+                 Kind="Wrench"
+                 Height="156"
+                 Width="190"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"  Foreground="{Binding Background, ElementName=MenuGestionDesConges}" />
+            </materialDesign:ColorZone>
+
+        </StackPanel>
+        <StackPanel x:Name="Menuannuaire" HorizontalAlignment="Left" Margin="-187,0,0,-491" Width="250" MouseLeave="MenuAnnuaireleave" Background="#FF555555" Visibility="Hidden" Grid.RowSpan="3">
+            <Label Height="105" />
+            <TextBlock FontStyle="Normal" FontSize="30" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Module" Foreground="White"/>
+
+            <TextBlock FontStyle="Normal" FontSize="22" FontFamily="calibri" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Annuaire" Background="{x:Null}" Foreground="White"/>
+
+            <Label x:Name="item1"  Margin="5,50,0,10" Height="38" Background="{x:Null}" MouseEnter="item1mouseenter" MouseLeave="item1mouseleqve"  Cursor="Hand" ToolTip="afficher la liste su personnel" MouseDown="image_MouseDown_1">
+
+                <TextBlock  Margin="20,0,0,0" FontFamily="Yu Gothic Medium" Style="{StaticResource MaterialDesignButtonTextBlock}" FontSize="16"   Text="Consulter l'annuaire" Foreground="White" MouseDown="menuitem1_2_MouseDown"  />
+            </Label>
+            <materialDesign:PackIcon x:Name="Logo_annuaire"
+          Kind="AccountCircle"
+          Height="217.5"
+          Width="210"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center" Margin="10,80,30,0" Foreground="#FF28D142" />
+        </StackPanel>
+        <DockPanel Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Canvas>
+                <Border x:Name="Header" Margin="0,0,0,0" Canvas.Left="99" Width="1315" Height="40" BorderThickness="0" Background="#FF040F4B">
+                    <DockPanel HorizontalAlignment="Right" Width="479">
+                        <materialDesign:Chip x:Name="NomUser" Background="#FF585B58" Margin="0" HorizontalAlignment="Right" Height="Auto" Width="220" Foreground="White" IconForeground="{x:Null}" IconBackground="{x:Null}">
+                            <materialDesign:Chip.Icon>
+                                <Image x:Name="Photo_Profil" Source="photos/defaut_homme.png"/>
+                            </materialDesign:Chip.Icon>
+                        </materialDesign:Chip>
+                        <materialDesign:PopupBox StaysOpen="True" Width="38" Foreground="White">
+                            <Menu IsMainMenu="True" >
+                                
+                                <MenuItem Header="Parametres du Compte" Click="NomUser_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon
+                                                Kind="AccountEdit" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <MenuItem Header="Deconnexion" Click="MenuItem_Click">
+                                    <MenuItem.Icon>
+                                        <materialDesign:PackIcon
+                                            Kind="ExitToApp" />
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </Menu>
+                        </materialDesign:PopupBox>
+                    </DockPanel>
+                </Border>
+                <StackPanel x:Name="Menu" Width="70" Height="923" Canvas.Top="75" Background="#FF3C3C3E">
+
+                    <!-- icone de l'acceuil -->
+                    <Image x:Name="Acceuil1"  VerticalAlignment="Center" MouseDown="Acceuil1_MouseDown" Cursor="Hand" Height="50" Width="65" Source="photos/flat icons/go-home-5.png" Margin="0,20,0,0" />
+                    <DockPanel x:Name="Onglet_Personnel" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" MouseEnter="dockpnel_acceuil2_MouseEnter" MouseLeave="dockpnel_acceuil2_MouseLeave">
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitre" >
+                                        <ThicknessAnimation Storyboard.TargetName="MenuGestionDuPersonnel" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+                        <!-- icone du menu gestion administrative -->
+                        <Image VerticalAlignment="Center" Cursor="Hand" Width="66" Height="50" Margin="0,20,0,0" Source="photos/gadminitrative.png" MouseEnter="Acceuil1_MouseEnter" />
+                    </DockPanel>
+                    <DockPanel x:Name="Onglet_Conges" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" MouseLeave="Onglet_Conges_MouseLeave" MouseEnter="Acceuil2_MouseEnter">
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitre2" >
+                                        <ThicknessAnimation Storyboard.TargetName="MenuGestionDesConges" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+
+                        <!-- icone de la gestion des congés -->
+                        <Image  VerticalAlignment="Center" Cursor="Hand" Width="65" Height="50" Source="
+photos/flat icons/009-suitcase.png" Margin="0,20,0,05"  />
+                    </DockPanel>
+                    <DockPanel x:Name="Onglet_Evaluation" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" MouseEnter="Onglet_Evaluation_MouseEnter" MouseLeave="Onglet_Evaluation_MouseLeave">
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitre_Evaluation" >
+                                        <ThicknessAnimation Storyboard.TargetName="MenuGestionDesEvaluations" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+
+                        <!-- icone de la gestion des evaluations -->
+                        <Image  VerticalAlignment="Center" Cursor="Hand" Width="65" Height="50" Margin="0,20,0,05" Source="photos/flat icons/009-graphic.png" />
+                    </DockPanel>
+                    <DockPanel x:Name="Onglet_Recrutement" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" MouseEnter="Onglet_Recrutement_MouseEnter" MouseLeave="Onglet_Recrutement_MouseLeave" >
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitre_Recrutement" >
+                                        <ThicknessAnimation Storyboard.TargetName="MenuGestionDesRecrutements" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+                        <!-- icone de la gaestion des entretiiens -->
+                        <Image  VerticalAlignment="Center" Cursor="Hand" Width="65" Height="50" Margin="0,20,0,0" Source="photos/flat icons/013-deal.png" MouseDown="Image_MouseDown" />
+                    </DockPanel>
+                    <DockPanel x:Name="ongletannuaire" MouseEnter="ongletannuaire_MouseEnter" MouseLeave="ongletannuaire_MouseLeave">
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitreannuaire" >
+                                        <ThicknessAnimation Storyboard.TargetName="Menuannuaire" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+                        <!-- icone de l'annuaire -->
+                        <Image x:Name="image" Margin="0,15,0,0" Source="photos/flat icons/21231.png "   Width="65" Height="50" />
+                    </DockPanel>
+
+
+                    <DockPanel x:Name="Onglet_Parametre" MouseEnter="dockpanel_parametres_MouseEnter" MouseLeave="dockpanel_parametres_MouseLeave" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70">
+                        <DockPanel.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="Apparaitre3" >
+                                        <ThicknessAnimation Storyboard.TargetName="MenuParametre" Storyboard.TargetProperty="Margin" From="-170,0,0,-672" To="70,0,0,-672" Duration="0:0:0.7" DecelerationRatio=".9" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DockPanel.Triggers>
+                        <!-- icone de options -->
+                        <Image  VerticalAlignment="Center" Cursor="Hand" Width="65" Height="50" Margin="0,20,0,0" Source="photos/Settings.png" MouseDown="Image_MouseDown" />
+                    </DockPanel>
+
+                </StackPanel>
+                <DockPanel>
+                    <Border Margin="-150,0,-78.667,0" CornerRadius="0,0,30,0" Height="75" Width="290" BorderBrush="Black" BorderThickness="2" Background="White">
+                        <Image x:Name="Image_entreprise" VerticalAlignment="Center" Cursor="Hand" Margin="0,8,8,8" HorizontalAlignment="Right" Height="55" Width="65" Source="./photos/telecharger.png" ToolTip="Changer le Logo de l'entreprise"/>
+                    </Border>
+                </DockPanel>
+            </Canvas>
+        </DockPanel>
+
+        <StackPanel x:Name="Notification" Grid.Column="1" HorizontalAlignment="Right" Height="100" Grid.Row="2" VerticalAlignment="Bottom" Width="359" Background="#FFE1E1E1" Visibility="Hidden">
+            <Image x:Name="Enlever_Notif" Height="34.666" Margin="321,0,0,0" Source="photos/Cancel-520.png" MouseDown="Enlever_Notif_MouseDown"/>
+            <TextBlock Margin="15,2,0,0" Height="22.6" Text="Vous Avez Des Entretiens D'evaluation Programmee" FontWeight="Bold" Foreground="#DD890000"/>
+            <TextBlock  Height="15.6" Text="Pour Ajourd'hui!" FontWeight="Bold" Foreground="#DD890000" Margin="110,0,0,0"/>
+            <Button x:Name="Voir_Prochaine_Entretien" Height="20.333" HorizontalAlignment="Right" Width="89.555" Background="#FF762121" BorderBrush="{x:Null}" FontSize="11" Click="Voir_Prochaine_Entretien_Click" Content="Voir"/>
+        </StackPanel>
+    </Grid>
+</Window>

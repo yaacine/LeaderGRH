@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfColorPalette.Wpf</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.Windows.Controls.Media.ColorItem">
+            <summary>
+            Represents a color item in the
+            <see cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/> control.
+            </summary>
+            <seealso cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorSwatches"/>    
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorItem.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>  
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.ColorItem.TooltipVisibilityProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TooltipVisibility.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.ColorItem.TooltipVisibility">
+            <summary>
+            Returns the visibility status of the Tool Tip
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.ColorPaletteButton">
+            <summary>
+            Represents a control that enables the user to select values by clicking it in the
+            <see cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/> control.
+            </summary>
+            <seealso cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorSwatches"/>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorPaletteButton.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>  
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorPaletteButton.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the
+            <see cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorPaletteButton"/> control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.ColorSwatches">
+            <summary>
+            Represents a set of swatches to allow the user to select colors from <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/>
+            </summary>
+            <seealso cref="T:Syncfusion.UI.Xaml.Controls.Media.SwatchesBase"/>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorSwatches.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>  
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorSwatches.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorSwatches"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.ColorSwatches.ColorItemWidthProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ColorItemWidth.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.ColorSwatches.ColorItemMarginProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ColorItemWidth.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.ColorSwatches.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Reeturns a value regrding the size of the swatches buttons.
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.ColorSwatches.ColorItemWidth">
+            <summary>
+            Used to set the Width of each ColorItem
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.ColorSwatches.ColorItemMargin">
+            <summary>
+            Used to set the Margin of each ColorItem
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.SfColorPalette">
+            <summary>
+            Represents a control that provides a set of colors in different <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorSwatches"/> swatches.
+            </summary>
+            <seealso cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SfColorPalette.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>  
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SfColorPalette.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/> control.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SfColorPalette.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Invoked when the ColorPalette gets the focus
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SfColorPalette.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Invoked when the focus is gone to another control
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.SfColorPalette.SelectedColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedColor.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SfColorPalette.GoBack">
+            <summary>
+            Returns the focus to the color palette from the Swatches
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.SfColorPalette.CanGoBack">
+            <summary>
+            Represents a variable to determine whether the control can navigate back.
+            </summary>
+            <value>
+            <c>true</c> if can navigate back; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:Syncfusion.Windows.Controls.Media.SfColorPalette.SelectedColorChanged">
+            <summary>
+            Invoke's an event when the <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/> conntrol's 
+            selected color has changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.SfColorPalette.SelectedColor">
+            <summary>
+            Returns a color from the <see 
+            cref="T:Syncfusion.UI.Xaml.Controls.Media.SfColorPalette"/> control that has been selected.
+            </summary>
+            <remarks>
+            The color can be selected from the
+            <seealso cref="T:Syncfusion.UI.Xaml.Controls.Media.ColorSwatches"/>
+            </remarks>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Apex">
+            <summary>
+            Represents a set of colors with Apex theme
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.SwatchesBase">
+            <summary>
+            Represents a base class for defining the swatches properties.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.SwatchesBase.ColorItemWidthProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ColorItemWidth.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Windows.Controls.Media.SwatchesBase.ColorItemMarginProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ColorItemMargin.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.SwatchesBase.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the size for overriding
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.SwatchesBase.ColorItemWidth">
+            <summary>
+            Gets or Sets the ColorItemWidth
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.SwatchesBase.ColorItemMargin">
+            <summary>
+            Gets or Sets the ColorItemMargin
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Apex.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Hardcover">
+            <summary>
+            Represents a set of colors with Hardcover theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Hardcover.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Metro">
+            <summary>
+            Represents a set of colors with Metro theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Metro.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Module">
+            <summary>
+            Represents a set of colors with Module theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Module.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Module">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Office">
+            <summary>
+            Represents a set of colors with Office theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Office.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Paper">
+            <summary>
+            Represents a set of colors with Paper theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Paper.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Pushpin">
+            <summary>
+            Represents a set of colors with Pushpin theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Pushpin.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Solstice">
+            <summary>
+            Represents a set of colors with Solstice theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Solstice.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Urban">
+            <summary>
+            Represents a set of colors with Urban theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Urban.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.Tools.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Waveform">
+            <summary>
+            Represents a set of colors with Waveform theme
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Windows.Controls.Media.Waveform.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <seealso
+            cref="N:Syncfusion.UI.Xaml.Controls.Media">Syncfusion.UI.Xaml.Controls.Media
+            Namespace</seealso>
+        </member>
+        <member name="T:Syncfusion.SfColorPaletteBaseAssembly">
+            <summary>
+            SharedBase assembly class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfColorPaletteBaseAssembly.Name">
+            <summary>
+            Name of the assembly.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfColorPaletteBaseAssembly.Assembly">
+            <summary>
+            Defines assembly object reference variable.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfColorPaletteBaseAssembly.RootNamespace">
+            <summary>
+            Root namespace of the assembly.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfColorPaletteBaseAssembly.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:Syncfusion.SfColorPaletteBaseAssembly"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfColorPaletteBaseAssembly.AssemblyResolver(System.Object,System.ResolveEventArgs)">
+            <summary>
+            Assemblies the resolver.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ResolveEventArgs"/> instance containing the event data.</param>
+            <returns>Assembly object.</returns>
+        </member>
+        <member name="T:Syncfusion.AssemblyInfo">
+            <summary>
+            Assembly info class
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Windows.Controls.Media.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Windows.Controls.Media.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

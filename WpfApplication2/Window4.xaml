@@ -1,0 +1,93 @@
+﻿<Window x:Class="WpfApplication2.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication2"
+        mc:Ignorable="d"
+        Title="Window4" Height="600" Width="700"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+         Icon="photos/images freepik/logo grh leader.png">
+    <Grid>
+        <materialDesign:Card Padding="22" Margin="10,10,47.5,0" Height="100" RenderTransformOrigin="0.5,0.5">
+            <TextBlock TextAlignment="Center" FontSize="40"  Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="Detailes de l'entretien" Margin="0,0,0,-19"/>
+        </materialDesign:Card>
+        <Image Source="Entretien.png" Height="75" VerticalAlignment="Top" Margin="0,25,10,0" Width="83.333" HorizontalAlignment="Right"/>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="White" VerticalAlignment="Stretch" Margin="33,65,33,35.667">
+            <ScrollViewer Margin="0,0,0,-1">
+                <StackPanel>
+                    <DockPanel Height="43.667">
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Date d'entretien :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBlock HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" x:Name="DATE" Initialized="TextBlock_Initialized" Margin="32,9.333,0,9.333" Width="211.334"/>
+                    </DockPanel>
+                    <Separator Background="Black" Margin="0,0,0,5" FontWeight="Bold" Height="2"></Separator>
+                    <DockPanel>
+                        <TextBlock  Height="19.333" Width="193" Text="Experience :" FontWeight="Bold" Margin="15,10,0,10"/>
+                        <ComboBox HorizontalAlignment="Left" Name="Exper" Margin="0" VerticalAlignment="Top" Width="206">
+                            <ComboBoxItem Content="1 ans " Name="ans1" />
+                            <ComboBoxItem Content="2 ans " Name="ans2" />
+                            <ComboBoxItem Content="3 ans " Name="ans3" />
+                            <ComboBoxItem Content="4 ans " Name="ans4" />
+                            <ComboBoxItem Content="5 ans " Name="ans5" />
+                            <ComboBoxItem Content="Plus De 5 ans " Name="ans5plus" />
+                        </ComboBox>
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel Height="43.667">
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Status :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="status" materialDesign:HintAssist.Hint="Status" Width="316.666" Margin="0,0,0,10" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Premiere Question :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="q1" materialDesign:HintAssist.Hint="Question" Width="313.332" Height="27" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Reponse :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="eq1" materialDesign:HintAssist.Hint="Reponse" Width="314" Height="29" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Deuxieme Question :" VerticalAlignment="Top" Height="24.334" Width="159.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="q2" materialDesign:HintAssist.Hint="Question 2" Width="314" Height="25.667" Margin="0,0,15,0" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Reponse :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="eq2" materialDesign:HintAssist.Hint="Reponse" Width="309.333" Height="27.667" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Salaire Désiré :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="saldesir" materialDesign:HintAssist.Hint="Salaire" Width="309.999" Height="28.334" TextChanged="saldesir_TextChanged_1" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Commentaire :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <TextBox x:Name="comment" materialDesign:HintAssist.Hint="Commentaire" Width="311.333" Height="23.667" />
+                    </DockPanel>
+                    <Separator Height="2" Background="Black" Margin="0,0,0,5" FontWeight="Bold"></Separator>
+                    <DockPanel>
+                        <TextBlock FontSize="15" TextWrapping="Wrap" Text="Etape suivante :" VerticalAlignment="Top" Height="24.334" Width="141.667" Margin="15,9.333,20,0" FontWeight="Bold"/>
+                        <ComboBox   Name="Etape" Height="25"  Width="206" Margin="-110,0,0,0">
+                            <ComboBoxItem Content="Accépté(e)" Name="Accept" FontSize="15"/>
+                            <ComboBoxItem Content="Refusé(e)" Name="refus" FontSize="15"/>
+                            <ComboBoxItem Content="Refaire Entretien" Name="refaire" FontSize="15"/>
+                            <ComboBoxItem Content="Ne pas décider maintenant" Name="pasmaint" FontSize="15"/>
+                        </ComboBox>
+                    </DockPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:Card>
+        <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="374,516.8,0,0" VerticalAlignment="Top" Width="123" Height="28" Name="save" Click="Button_Click"/>
+        <Button Content="Retour" IsEnabled="True" HorizontalAlignment="Left" Margin="152,516.8,0,0" VerticalAlignment="Top" Width="123" Height="28" x:Name="Retour_Bouton" Click="Retour" d:LayoutOverrides="HorizontalAlignment"/>
+    </Grid>
+</Window>
